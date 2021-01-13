@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food delivery in Kovel</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div style="display:none">
+		<include src="build/img/sprite.svg"></include>
+	</div>
+    <header class="main-header">
+        <div class="container">
+            <nav class="main-header-nav">
+                <ul class="main-header-menu">
+                    <li class="main-header-item"><a href="#" class="main-header-menu-link">Payment</a></li>
+                    <li class="main-header-item"><a href="#" class="main-header-menu-link">About us</a></li>
+                    <li class="main-header-item"><a href="#" class="main-header-menu-link">Contacts</a></li>  
+                </ul>
+                <img class="main-header-logo" src="img/logo.png" srcset="img/logo@2x.png 2x" alt="CLASSIC сім'я ресторанів">
+                <ul class="main-header-contacts">
+                    <li class="main-header-item main-header-item-time">Daily 11am - 9pm</li>
+                    <li class="main-header-item main-header-item-tel"><tel>0 800 33 08 98</tel></li>
+                </ul>
+            </nav>
+            <section class="main-header-desc">
+                <h1 class="main-header-title">Food delivery in Kovel</h1>
+                <h2 class="main-header-subtitle">If you decide to relax or have unexpected guests, call us. We make sure that your vacation is comfortable, enjoyable and delicious</h2>
+                <img class="main-header-img main-header-dec-img" data-speed="-3" src="img/piza.png" srcset="img/piza@2x.png 2x">
+                <img class="main-header-dec-img main-header-dec-img-tomato" data-speed="-3" src="img/tomato.png" srcset="img/tomato@2x.png 2x">
+                <img class="main-header-dec-img main-header-dec-img-cucumber" data-speed="1" src="img/cucumber.png" srcset="img/cucumber@2x.png 2x">
+                <img class="main-header-dec-img main-header-dec-img-mushroom" data-speed="2" src="img/mushroom.png" srcset="img/mushroom@2x.png 2x">
+                <img class="main-header-dec-img main-header-dec-img-oregano1" data-speed="-2" src="img/oregano1.png" srcset="img/oregano1@2x.png 2x">
+                <img class="main-header-dec-img main-header-dec-img-oregano2" data-speed="3" src="img/oregano2.png" srcset="img/oregano2@2x.png 2x">
+                <div class="main-header-dec-img main-header-dec-img-shrimp-shadow">
+                    <svg viewBox="0 0 84 150" width="84" height="150">
+                      <use xlink:href="#icon-shrimp"></use>
+                    </svg>
+                </div>
+                <div class="main-header-dec-img main-header-dec-img-tomato-shadow">
+                    <svg viewBox="0 0 120 130" width="120" height="130">
+                      <use xlink:href="#icon-tomato"></use>
+                    </svg>
+                </div>
+                <div class="main-header-dec-img main-header-dec-img-mushroom-shadow">
+                    <svg viewBox="0 0 120 130" width="120" height="130">
+                      <use xlink:href="#icon-mushroom"></use>
+                    </svg>
+                </div>
+                <div class="main-header-dec-img main-header-dec-img-piza-shadow">
+                    <svg viewBox="0 0 136 69" width="136" height="69">
+                      <use xlink:href="#icon-piza"></use>
+                    </svg>
+                </div>
+            </section>
+        </div>
+    </header>
+    <script>
+        document.addEventListener("mousemove", parallax);
+        function parallax(e) {
+            this.querySelectorAll('img.main-header-dec-img').forEach(layer => {
+                const speed = layer.getAttribute('data-speed');
+
+                const x = (window.innerWidth - e.pageX*speed)/100;
+                const y = (window.innerHeight - e.pageY*speed)/100;
+
+                layer.style.transform = `translateX(${x}px) translateY(${y}px)`;
+            });
+        }
+    </script>
+</body>
+</html>

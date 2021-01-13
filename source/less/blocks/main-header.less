@@ -1,0 +1,142 @@
+.main-header {
+    width: 100%;
+    background-color: #F0F5FB;
+    overflow: hidden;
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    &-nav {
+        position: relative;
+        width: 100%;
+        min-height: 80px;
+        margin: 25px auto 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        font-family: 'Montserrat-Regular', sans-serif;
+        font-size: 16px;
+        line-height: 20px;
+        color: #000000;
+    }
+    &-menu {
+        display: flex;
+        justify-content: space-between;
+        width: 300px;
+        &-link {
+            text-decoration: none;
+            color: #000000;
+            &:hover {
+                color: #fe5626
+            }
+        }
+    }
+    &-logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &-contacts {
+        display: flex;
+        justify-content: space-between;
+        width: 375px;
+    }
+    &-item {
+        &-time {
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: -10px;
+                display: block;
+                border-radius: 50%;
+                width: 4px;
+                height: 4px;
+                background-color: #46CB72;
+                transform: translate(-100%, -50%);
+            }
+        }
+        &-tel {
+            position: relative;
+            font-family: 'Montserrat-Bold', sans-serif;
+            font-size: 18px;
+            line-height: 22px;
+            font-weight: 700;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: -16px;
+                display: block;
+                background:center no-repeat url(../img/tel.svg), content-box linear-gradient(18270deg, rgba(245,134,86,1) 0%, rgba(254,86,38,1) 100%);
+                border-radius: 50%;
+                width: 33px;
+                height: 33px;
+                transform: translate(-100%, -50%);
+            }
+        }
+    }
+    &-desc {
+        position: relative;
+        margin: 105px 0 508px 0;
+        display: flex;
+        flex-direction: column;
+        color: #000000;
+    }
+    &-title {
+        margin: 0 auto 18px auto;
+        font-family: 'Montserrat-Bold', sans-serif; 
+        font-size: 48px;
+    }
+    &-subtitle {
+        width: 570px;
+        margin: 0 auto;
+        font-family: 'Montserrat-Regular', sans-serif; 
+        font-size: 18px;
+        line-height: 140%;
+        font-weight: 400;
+        text-align: center;
+    }
+    &-img {
+        position: absolute;
+        top: 100%;
+        left: 22%;
+    }
+    &-dec-img {
+        position: absolute;
+        &-tomato {
+            top: 63px;
+            left: 105px;
+        }
+        &-cucumber {
+            top: 0;
+            right: -108px;
+        }
+        &-mushroom {
+            top: 308px;
+            left: -43px;
+            z-index: 1;
+        }
+        &-oregano1 {
+            top: 205px;
+            left: 112px;
+        }
+        &-oregano2 {
+            top: 315px;
+            right: 60px;
+        }
+        &-shrimp-shadow {
+            top: -185px;
+            right: -121px;
+        }
+        &-tomato-shadow {
+            top: -73px;
+            left: -113px;
+        }
+        &-mushroom-shadow {
+            top: 332px;
+            left: -15px;
+        }
+    }
+}
