@@ -6,6 +6,7 @@ node_modules/
 *.pdf
 *.psd
 *.sublime*
+build/
 npm-debug.*
 source/css/*.css
 Thumbs.db
